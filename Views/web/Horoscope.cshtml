@@ -1,0 +1,179 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="../images/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../images/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../images/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../images/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../images/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../images/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../images/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../images/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/ico/favicon-16x16.png">
+    <link rel="manifest" href="../image/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../images/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        div.data {
+            position: relative;
+            text-indent: 15px;
+            margin: 25px auto -26px auto;
+            padding: 20px;
+            max-width: 540px;
+            min-width: 300px;
+            min-height: 500px;
+            background: white;
+            border-top: 1px solid #3C3F4C;
+            border-left: 1px solid #3C3F4C;
+            border-right: 1px solid #3C3F4C;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+            -webkit-box-shadow: 0px 0px 3px 0px #3C3F4C;
+            box-shadow: 0px 0px 3px 0px #3C3F4C;
+            opacity: 0.8;
+        }
+        div.zodiac {
+            text-align: center;
+        
+        }
+        h5 {
+        font-weight: bold;
+        }
+
+    </style>
+    <title>Horoscope</title>
+</head>
+<body background="../images/bg/bgyellow.gif">
+    <audio src="../images/bgmusic.mp3" autoplay="autoplay" loop="loop"></audio>
+
+        <div class="data">
+
+            <div class="zodiac">
+                @{ string zodiac = "";
+                    string message = "";
+
+                    zodiac = @ViewBag.zodiac;
+                }
+
+
+                @if (zodiac == "Monkey")
+                {
+                    <img src="../images/zodiac/monkey.png" />
+                    message = "Uggoy";
+                    <h1>Year of the Monkey</h1>
+                    <h5>2016, 2004, 1992, 1980</h5>
+                }
+                else if (zodiac == "Rooster")
+                {
+                    <img src="../images/zodiac/rooster.png" />
+                    message = "Manok";
+                    <h1>Year of the Rooster</h1>
+                    <h5>2017, 2005, 1993, 1981</h5>
+                }
+                else if (zodiac == "Dog")
+                {
+                    <img src="../images/zodiac/dog.png" />
+                    message = "Iro";
+                    <h1>Year of the Dog</h1>
+                    <h5>2018, 2006, 1994, 1982, 1970</h5>
+                }
+                else if (zodiac == "Pig")
+                {
+                    <img src="../images/zodiac/pig.png" />
+                    message = "Baboy";
+                    <h1>Year of the Pig</h1>
+                    <h5>2019, 2007, 1995, 1983, 1971</h5>
+                }
+                else if (zodiac == "Rat")
+                {
+                    <img src="../images/zodiac/rat.png" />
+                    message = "Ilaga";
+                    <h1>Year of the Rat</h1>
+                    <h5>2008, 1996, 1984, 1972</h5>
+                }
+                else if (zodiac == "Ox")
+                {
+                    <img src="../images/zodiac/ox.png" />
+                    message = "Kabaw";
+                    <h1>Year of the Ox</h1>
+                    <h5>2009, 1997, 1985, 1973</h5>
+                }
+                else if (zodiac == "Tiger")
+                {
+                    <img src="../images/zodiac/tiger.png" />
+                    message = "Tigre";
+                    <h1>Year of the Tiger</h1>
+                    <h5>2010, 1998, 1986, 1974</h5>
+                }
+                else if (zodiac == "Rabbit")
+                {
+                    <img src="../images/zodiac/rabbit.png" />
+                    message = "Kuneho";
+                    <h1>Year of the Rabbit</h1>
+                    <h5>2011, 1999, 1987, 1975</h5>
+                }
+                else if (zodiac == "Dragon")
+                {
+                    <img src="../images/zodiac/dragon.png" />
+                    message = "Dragun";
+                    <h1>Year of the Dragon</h1>
+                    <h5>2012, 2000, 1988, 1976</h5>
+                }
+                else if (zodiac == "Snake")
+                {
+                    <img src="../images/zodiac/snake.png" />
+                    message = "Halas";
+                    <h1>Year of the Snake</h1>
+                    <h5>2013, 2001, 1989, 1977</h5>
+                }
+                else if (zodiac == "Horse")
+                {
+                    <img src="../images/zodiac/horse.png" />
+                    message = "Kabajo";
+                    <h1>Year of the Horse</h1>
+                    <h5>2014, 2002, 1990, 1978</h5>
+                }
+                else if (zodiac == "Goat")
+                {
+                    <img src="../images/zodiac/sheep.png" />
+                    message = "Kanding";
+                    <h1>Year of the Goat</h1>
+                    <h5>2015, 2003, 1991, 1979</h5>
+                }
+            </div>
+                    <div class="w3-container w3-center w3-animate-top">
+                        <h4>@ViewBag.Birthdate</h4>
+                        <h5>Status  :  @ViewBag.status</h5>
+                        <p>Ikaw si @ViewBag.Fname @ViewBag.Lname naga edad ug @ViewBag.Age anyos ug natawo sa </p>
+                        <p>tuig sa mga @message ug naga una sa letrang @ViewBag.InitialF ug @ViewBag.InitialL imong ngalan ug apelyido</p>
+
+                        <p>&nbsp;&nbsp;@ViewBag.msg<br /></p>
+                        <p><h5>Lucky Color:</h5>@ViewBag.LC<br /></p>
+                        <p><h5>Bad Luck:</h5> @ViewBag.BL</p>
+                    </div>
+        
+        </div>
+    </body>
+</html>
